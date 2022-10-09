@@ -1,0 +1,32 @@
+#web-security-question {
+    background-color: whitesmoke;
+    font-size: large;
+    width: fit-content;
+    padding: 2rem;
+    box-shadow: 1px 1px 8px #888888;
+
+}
+#web-security-answer {
+    background-color: whitesmoke;
+    font-size: large;
+    width: fit-content;
+}
+
+.answer {
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 8px #888888;
+    
+
+}
+.answer p{
+    padding: 1%;
+}
+.answer li{
+    padding: 1%;
+}
+
+body {
+    background-color: #e4e4e4;
+    width: fit-content;
+
+}
