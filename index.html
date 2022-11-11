@@ -3,36 +3,87 @@
     
   <head>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>CA</title>
+    <script src="https://kit.fontawesome.com/a6adea9a29.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RainyDays</title>
   </head>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-    <h2>Web Security</h2>
-    <p id="web-security-question">How would you advise a potential client to secure his/her website from web security attacks? Note: the word count for your answer should not be greater than 250 words</p>
-    <div class="answer">
-        <p id="web-security-answer">
-            There are a number of ways to secure a website from web security attacks. Some of these ways are to make sure that:
-            <ul>
-                <li>
-                    Ensure that all data is sanitized before it is accepted by the system, either manually or through trusted third-party solutions
-                </li>
-                <li>
-                    Ensure that the website uses a secure authentication and open-standard authorization protocol or framework.
-                    Make use of well-known and trusted third-party applications, when possible.
-                </li>
-                <li>
-                    Ensure that the website is built using a continuous integration/continuous deployment workflow. This can catch oversights made
-                    by developers when changes occur in the codebase, and reject changes before reaching production.
-                </li>
-                <li>
-                    Ensure that the network the website is hosted on is secure.
-                </li>
-                <li>
-                     Automaticaly timeout inactive users to protect user credentials
-                </li>
-            </ul>  
-        </p>
-    </div>   
+    <header>
+      <img id="brand-logo" src="images/branding/RainyDays_Logo_downscaled.png" alt="RainyDays Logo">
+    </header>
+    <nav class="sticky">
+      <img id="wooden-background" src="images/branding/wood_downscaled.png" alt="wooden-background">
+      <ul>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Sale</a></li>
+      </ul>
+      <div class="banner-message">
+        <p>Always free shipping on orders over 1000,-</p>
+    </div>
+    </nav>
+    <main>
+      <section class="hero-section has-drop-shadow base-section">
+        <img  class="hero-image" src="images/mood/web-yellow-jacket.jpg" alt="Woman wearing a yellow jacket standing in the forest in fall" style="width:100%">
+        <article class="hero-text-part">
+          <h2 class="hero-header">Autumn 2022 </h2>
+          <p class="hero-text">
+            Get your fall wardrobe started early with our amazing jackets sale! <br/>
+            All jackets are <b>50% off</b> until November 14th using code <b>AUT22</b>
+          </p>
+        </article>
+      </section>
+
+      <section class="base-section">
+        <article class="section-text-part">
+          <h2>Most Popular </h2>
+          <p class="section-text">
+            Our most popular items this week
+          </p>
+          <div class="product-showcase">
+            <div  class="product-tile has-drop-shadow">
+              <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
+              <h3>Skeljabrekka</h3>
+              <h4>Running jacket</h4>
+              <p class="product-price">NOK 1199,- <button onclick="#">Buy Now</button></p>
+            </div>
+            <div  class="product-tile has-drop-shadow">
+              <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
+              <h3>Skeljabrekka</h3>
+              <h4>Running jacket</h4>
+              <p class="product-price">NOK 1199,- <button onclick="#">Buy Now</button></p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="base-section mood-section explore">
+        <article class="section-content">
+          <div class="bg-fill"></div>
+          <h2 class="mood-header">Explore</h2>
+          <p class="mood-text">
+            There's no substitute for getting out there
+            and exploring the world around you.
+          </p>
+          <div class="mood-image">
+              <img src="images/mood/explore.jpg" alt="Man looking at the horizon on top of a snowy mountain">
+          </div>
+        </article>
+      </section>
+      <section class="base-section mood-section comfort">
+        <article class="section-content">
+          <div class="bg-fill"></div>
+          <h2 class="mood-header">Pushing the Comfort Zone</h2>
+          <p class="mood-text">
+            Pushing through because you know that
+            it's worth it in the end.
+          </p>
+          <div class="mood-image">
+              <img src="images/mood/comfort.jpg" alt="Man looking at the horizon on top of a snowy mountain">
+          </div>
+        </article>
+      </section>
+    </main>
+    
+
   </body>
 </html>
