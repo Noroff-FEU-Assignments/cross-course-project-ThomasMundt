@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html>
-    
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script src="https://kit.fontawesome.com/a6adea9a29.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RainyDays</title>
-  </head>
-  <body>
-    <header>
-      <img id="brand-logo" src="images/branding/RainyDays_Logo_downscaled.png" alt="RainyDays Logo">
-    </header>
-    <nav class="sticky">
-      <img id="wooden-background" src="images/branding/wood_downscaled.png" alt="wooden-background">
-      <ul>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Sale</a></li>
-      </ul>
-      <div class="banner-message">
-        <p>Always free shipping on orders over 1000,-</p>
-    </div>
-    </nav>
-    <main>
-      <section class="hero-section has-drop-shadow base-section">
-        <img  class="hero-image" src="images/mood/web-yellow-jacket.jpg" alt="Woman wearing a yellow jacket standing in the forest in fall" style="width:100%">
-        <article class="hero-text-part">
-          <h2 class="hero-header">Autumn 2022 </h2>
-          <p class="hero-text">
-            Get your fall wardrobe started early with our amazing jackets sale! <br/>
-            All jackets are <b>50% off</b> until November 14th using code <b>AUT22</b>
-          </p>
-        </article>
-      </section>
 
-      <section class="base-section">
-        <article class="section-text-part">
+<head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script src="https://kit.fontawesome.com/a6adea9a29.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RainyDays</title>
+</head>
+<body>
+  <header>
+    <img id="brand-logo" src="images/branding/RainyDays_Logo_downscaled.png" alt="RainyDays Logo">
+  </header>
+  <nav class="sticky">
+    <input class="checkbox top-left-position" type="checkbox" name="" id="" />
+    <div class="hamburger-lines top-left-position">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="items ">
+        <li><h1 class="logo"><img id="brand-logo" src="images/branding/RainyDays_Logo_downscaled_small.png" alt="RainyDays Logo"></h1></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Sale</a></li>
+    </div>
+    <div class="banner-message">
+      <p>Always free shipping on orders over 1000,-</p>
+    </div>
+  </nav>
+  <main>
+    <section class="hero-section has-drop-shadow base-section">
+      <img  class="hero-image" src="images/mood/web-yellow-jacket.jpg" alt="Woman wearing a yellow jacket standing in the forest in fall" style="width:100%">
+      <article class="hero-text-part">
+        <h2 class="hero-header">Autumn 2022 </h2>
+        <p class="hero-text">
+          Get your fall wardrobe started early with our amazing jackets sale! <br/>
+          All jackets are <b>50% off</b> until November 14th using code <b>AUT22</b>
+        </p>
+      </article>
+    </section>
+    
+    <section class="base-section">
+      <article class="section-text-part">
+        <div class="product-showcase ">
           <h2>Most Popular </h2>
-          <p class="section-text">
-            Our most popular items this week
-          </p>
-          <div class="product-showcase">
-            <div  class="product-tile has-drop-shadow">
-              <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
-              <h3>Skeljabrekka</h3>
-              <h4>Running jacket</h4>
-              <p class="product-price">NOK 1199,- <button onclick="#">Buy Now</button></p>
+          <a class="product-tile has-drop-shadow" href="#">
+            <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
+            <div class="color-options margin-1-rems-top-bottom">
+              <div class="color-option bg-red"></div>
+              <div class="color-option bg-grey"></div>
+              <div class="color-option bg-blue"></div>
             </div>
-            <div  class="product-tile has-drop-shadow">
-              <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
-              <h3>Skeljabrekka</h3>
-              <h4>Running jacket</h4>
-              <p class="product-price">NOK 1199,- <button onclick="#">Buy Now</button></p>
-            </div>
-          </div>
+            <h3>Skeljabrekka</h3>
+            <h4>Running jacket</h4>
+            <p class="product-price">NOK 1199,- </p>
+          </a>
+        </div>
         </article>
       </section>
-      <section class="base-section mood-section explore">
+      <section class="mood-section explore">
         <article class="section-content">
           <div class="bg-fill"></div>
-          <h2 class="mood-header">Explore</h2>
-          <p class="mood-text">
-            There's no substitute for getting out there
-            and exploring the world around you.
-          </p>
+          <div class="text-section">
+            <h2 class="mood-header">Explore</h2>
+            <p class="mood-text">
+              There's no substitute for getting out there
+              and exploring the world around you.
+            </p>
+          </div>
           <div class="mood-image">
-              <img src="images/mood/explore.jpg" alt="Man looking at the horizon on top of a snowy mountain">
+            <img src="images/mood/explore.jpg" alt="Man looking at the horizon on top of a snowy mountain">
           </div>
         </article>
       </section>
-      <section class="base-section mood-section comfort">
+      <section class="base-section">
+        <article class="section-text-part">
+          <div class="product-showcase ">
+            <h2>Latest products</h2>
+            <a class="product-tile has-drop-shadow" href="#">
+              <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
+              <div class="color-options margin-1-rems-top-bottom">
+                <div class="color-option bg-red"></div>
+                <div class="color-option bg-grey"></div>
+                <div class="color-option bg-blue"></div>
+              </div>
+              <h3>Skeljabrekka</h3>
+              <h4>Running jacket</h4>
+              <p class="product-price">NOK 1199,- </p>
+            </a>
+          </div>
+          </article>
+        </section>
+      <section class="mood-section comfort">
         <article class="section-content">
           <div class="bg-fill"></div>
           <h2 class="mood-header">Pushing the Comfort Zone</h2>
@@ -78,12 +98,64 @@
             it's worth it in the end.
           </p>
           <div class="mood-image">
-              <img src="images/mood/comfort.jpg" alt="Man looking at the horizon on top of a snowy mountain">
+            <img src="images/mood/comfort.jpg" alt="Man looking at the horizon on top of a snowy mountain">
           </div>
         </article>
       </section>
+      <section class="base-section">
+        <article class="section-text-part">
+          <div class="product-showcase ">
+            <h2>All products </h2>
+            <a class="product-tile has-drop-shadow" href="#">
+              <img src="images/branding/resized/RainyDays_Jacket3_red.png" alt="Skeljabrekka running jacket, color red">
+              <div class="color-options margin-1-rems-top-bottom">
+                <div class="color-option bg-red"></div>
+                <div class="color-option bg-grey"></div>
+                <div class="color-option bg-blue"></div>
+              </div>
+              <h3>Skeljabrekka</h3>
+              <h4>Running jacket</h4>
+              <p class="product-price">NOK 1199,- </p>
+            </a>
+          </div>
+          <button>
+            <i class="fas fa-arrow-down"></i>
+          </button>
+          </article>
+        </section>
     </main>
-    
-
-  </body>
-</html>
+    <footer class="foot">
+      <article>
+        <h2>Newsletter</h2>
+        <p>Sign up for our newsletter to get the latest news and offers</p>
+        <form>
+          <input type="email" placeholder="Email" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </article>
+      <article>
+        <h2>Info</h2>
+        <p>Read more about us here</p>
+        <p>Address
+          5651 US Hwy 18
+          Suite 101
+          Cleveland, OH 44134
+          
+          Phone Number 
+          216-521-0442
+          Email Address
+          info@rainydays.com</p>
+        </article>
+        <article>
+          <h2>Support</h2>
+          <p>Contact us here</p>
+          <p>or</p>
+          <p>
+            Email Address 
+            support@rainydays.com
+          </p>
+        </article>
+      </footer>
+      
+    </body>
+    </html>
