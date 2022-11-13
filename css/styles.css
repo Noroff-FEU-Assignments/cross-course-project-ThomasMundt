@@ -12,6 +12,13 @@
     --main-white-color: #EEEEF0;
     --explore-blue-color: #6577B3;
 }
+
+a:-webkit-any-link {
+    color: var(--main-white-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
 body {
     background-color: var(--bg-color, #e4e4e4);
     width: 100%;
@@ -19,22 +26,13 @@ body {
     padding: 0;
     justify-content: center;
 }
-
-img {
-    display: block;
-    width: 100%;
-    height: auto;
+body::-webkit-scrollbar {
+    display: none;
 }
-
-
-
 
 /* 
     Hides the scrollbar on the side
 */
-body::-webkit-scrollbar {
-    display: none;
-}
 
 
 #brand-logo{
@@ -42,85 +40,94 @@ body::-webkit-scrollbar {
     max-width: 300px; 
     max-height: 200px;
     scale: 0.5;
- 
 }
 
 /* 
     || Navigation bar and Header
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 
 nav {
     display: grid;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-evenly;
     list-style: none;
+    z-index: 12;
+    color: var(--main-white-color);
+    background-color: var(--main-brand-color);
+    font-size: 2rem;
+    
 }
 
 
-nav a {
+nav li {
     text-decoration: none;
+    align-self: center;
+    color: var(--main-white-color);
+}
+
+
+nav li img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 128;
+    max-height: 48px;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: var(--main-white-color);
+}
+
+.fa-bars {
+    color: var(--main-white-color);
+    font-size: 2rem;
 }
 
 
 
 nav .checkbox {
-    position: absolute;
-    display: block;
-    z-index: 5;
+    grid-column: 3/3;
+    grid-row: 1/1;
+    z-index: 11;
+    width: 2rem;
+    height: 2rem;
     opacity: 0;
+    place-self:  right;
     cursor: pointer;
 }
 
-
-.top-left-position {
-    position: absolute;
-    height: 2rem;
-    width: 2rem;
-    top: 1rem;
-    left: 1rem;
-}
-.top-right-position {
-    position: absolute;
-    height: 2rem;
-    width: 2rem;
-    top: 1rem;
-    right: 5rem;
-    
-}
-
-nav .hamburger-lines {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
+nav .hamburger {
+    z-index: 10;;
+    grid-column: 3/3;
+    grid-row: 1/1;
 }
 
 .items {
     display: grid;
     grid-template-columns: 1fr ;
-    padding: 2rem 2rem;
     width: 100%;
-    transform: translate(-150%);
+    height: 100vw;
+    transform: translate(-200%);
+    grid-column: 2/2;
     transition: transform 0.3s ease-in-out;
+    height: min-content;
+    row-gap: 2rem;
+    display: none;
+}
+
+.logo {
+    place-self: center;
 }
 
 
 nav input[type="checkbox"]:checked ~ .items {
-    transform: translateX(1rem);
+    position: relative;
+    transform: translateX(2rem);
+    display: grid;
+    justify-content: center;
+    text-align: center;
 }
 
 nav input[type="checkbox"]:checked ~ .logo{
@@ -140,32 +147,13 @@ header {
 
 }
 
-.sticky {
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-
-#wooden-background{
-    grid-row: 1 / 2;
-    position: relative;
-    width: 200%;
-    height: auto;
-    z-index:2;
-    max-height: 2.5rem;
-
-}
 
 
-.banner-message {
+.banner-message p {
     align-self: flex-end;
-    grid-column: 1 / 4;
-    grid-row: 2 / 2;
     justify-self: right;
     grid-row-start: 2;
-    color: white;
-    margin-right: 2.6rem;
-    max-height: 1.8rem;
+    font-size: 1.2rem;
 
 }
 .banner-message p {
@@ -203,7 +191,6 @@ main {
     padding: 0.5rem;
     margin: 1rem;
     text-align: center;
-   
     font-size: 1.5rem;
     color: var(--main-brand-color);
 }
@@ -231,20 +218,7 @@ main {
     border-radius: 0.5rem;
 }
 
-.bg-red{
-    background-color: red;
-}
-.bg-grey{
-    background-color: grey;
-}
-.bg-blue{
-    background-color: blue;
-}
 
-
-.has-drop-shadow {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
 
 .hero-section {
     display: grid;
@@ -256,19 +230,16 @@ main {
 }
 
 .hero-image {
-    z-index: 0;
     grid-column: 1 / 2;
     grid-row: 1 / 1;
 }
 
 .hero-header {
-    z-index: 0;
     grid-column: 2 / 2;
     grid-row: 1 / 1;
 }
 
 .hero-text-part{
-    z-index: 0;
     margin: 1rem;
     grid-column: 2 / 2;
     grid-row: 1 / 1;
@@ -280,13 +251,6 @@ main {
     grid-row: 1 / 1;
 }
 
-.margin-1-rems {
-    margin: 1rem;
-}
-
-.margin-1-rems-top-bottom {
-    margin: 1rem 0;
-}
 
 /* 
    || Product showcase grid
@@ -328,7 +292,6 @@ main {
     z-index: 0;
     grid-column: 1/6;
     grid-row: 1 / 1;
-
 }
 
 .mood-section{
@@ -360,7 +323,7 @@ main {
     padding: 1rem;
     
 }
-.explore  .bg-fill{
+.explore .bg-fill{
     background-color: var(--explore-blue-color);
 }
 
@@ -421,14 +384,18 @@ main {
     border: 0.25rem solid var(--main-white-color);
     outline: 1rem solid var(--yellow-bg-color);
 }
+/* 
 
+|| Footer styling
+*/ 
 .foot {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: 80%;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
     font:roboto;
     justify-content: center;
+    text-align: center;
     margin: auto;
     background-color: var(--main-brand-color);
     color: var(--main-white-color);
@@ -438,9 +405,57 @@ main {
 
 /* 
 
+|| Utility classes
+*/ 
+.margin-1-rems {
+    margin: 1rem;
+}
 
-*/
+.margin-1-rems-top-bottom {
+    margin: 1rem 0;
+}
+.margin-2-rem {
 
+    height: 2rem;
+    width: 2rem;
+
+}
+.top-left-position {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: 1rem;
+    left: 1rem;
+}
+.top-right-position {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: 1rem;
+    right: 5rem;
+    
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.bg-red{
+    background-color: red;
+}
+.bg-grey{
+    background-color: grey;
+}
+.bg-blue{
+    background-color: blue;
+}
+
+
+.has-drop-shadow {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
 @media (min-width: 600px) {
     .product-showcase { 
         grid-template-columns: repeat(4, 1fr); 
@@ -464,28 +479,64 @@ main {
         display: block;
         position: static;
         width: 100%;
-        background-color: aqua;
-    }
-    nav .items {
-        display: grid;
-        grid-template-columns:3fr 1fr 1fr 1fr ;
-        padding: 2rem 2rem;
-        width: 100%;
-        transform: translate(0);
-        background-color: aqua;
-    }
-    nav a {
-        display: inline-block;
+        background-image: url("/images/branding/wood_downscaled.png");
+        background-repeat: no-repeat;
+        background-size:  100% 65%;
     }
 
-    .logo {
-        grid-template-columns: 1/1;
-        color: #0e2431;
+
+
+    nav .items {
+        display: grid;
+        padding: 1rem 1rem;
+        grid-template-columns:1fr 4fr 1fr 1fr 1fr ;
+        width: 100%;
+        transform: translate(0);
+        color: var(--main-white-color);
     }
-    nav .hamburger-lines, .checkbox {
+    nav .items .logo {
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav a {
+        display: inline-block;
+        color: var(--main-white-color);
+    }
+
+
+    nav .hamburger, .checkbox {
         display: none;
     }
     
+    .logo {
+    
+        justify-self: left;
+    
+    }
+    .banner-message{
+        grid-column: 2 / 2;
+    }
+
+
+    .foot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+        font:roboto;
+        justify-content: center;
+        margin: auto;
+        background-color: var(--main-brand-color);
+        color: var(--main-white-color);
+    }
+    
+
+
 
   }
 
