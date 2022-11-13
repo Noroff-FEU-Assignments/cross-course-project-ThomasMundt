@@ -461,7 +461,10 @@ main {
 .bg-blue{
     background-color: blue;
 }
-
+nav ul {
+    list-style: none;
+    padding: 0%;
+}
 
 .has-drop-shadow {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -485,6 +488,7 @@ main {
     .explore .mood-image{
         grid-column: 2 / 2;
     }
+
     nav {
         display: block;
         position: static;
@@ -494,13 +498,11 @@ main {
         background-size:  100% 65%;
     }
 
-    nav ul {
-        list-style: none;
-    }
+
 
     nav .items {
         display: grid;
-        padding: 1rem 1rem;
+        padding: 1rem 0;
         grid-template-columns:1fr 4fr 1fr 1fr 1fr ;
         width: 100%;
         transform: translate(0);
