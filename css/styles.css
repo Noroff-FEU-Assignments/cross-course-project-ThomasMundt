@@ -261,6 +261,7 @@ main {
     column-gap: 3rem;
     row-gap: 3rem ;
     margin: 0 auto;
+
 }
 
 
@@ -273,11 +274,12 @@ main {
     width: 100%;
     max-width: 300px;
     text-decoration:none; 
-    color: inherit; 
+
     justify-self : center;   
 }
-.product-tile h3,h4 {
+.product-tile h3,h4,p {
     margin: 0.5rem 0;
+    color: #333;
 }
 .product-tile h4 {
     font-size: 1rem;
@@ -403,6 +405,9 @@ main {
 
 
 
+.link a {
+    text-decoration: underline;
+}
 /* 
 
 || Utility classes
@@ -484,7 +489,9 @@ main {
         background-size:  100% 65%;
     }
 
-
+    nav ul {
+        list-style: none;
+    }
 
     nav .items {
         display: grid;
