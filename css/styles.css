@@ -277,7 +277,7 @@ main {
 
     justify-self : center;   
 }
-.product-tile h3,h4,p {
+.product-tile h3,h4 {
     margin: 0.5rem 0;
     color: #333;
 }
@@ -288,7 +288,12 @@ main {
 .product-showcase :hover {
     box-shadow: none;
 
+
 }
+.product-tile p {
+    color: #333;
+}
+
 
 .bg-fill{
     z-index: 0;
